@@ -1,0 +1,11 @@
+:root {
+    --theme-black-background-color: #333;
+    --theme-black-accent-color: #999;
+    --theme-black-text-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

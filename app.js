@@ -3,7 +3,7 @@ const path = require('path')
 const dbconfig = require('./config/dbconfig')
 
 const express = require('express')
-const mongoose = require('mongose')
+const mongoose = require('mongoose')
 const session = require('express-session')
 const exp = require('constants')
 const mongodbStore = require('express-mongodb-session')(session)
@@ -39,6 +39,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 const flash = require('connect-flash')
 app.use(flash())
 
+const cors = require('cors')
+app.use(cors())
+
 // Response local variable
 app.use((req, res, next) => {
     res.locals.flashSuccess = undefined
@@ -47,6 +50,7 @@ app.use((req, res, next) => {
 
     res.locals.pageName = 'home'
     res.locals.pageTitle = 'Home'
+    next()
 })
 
 // Routes
