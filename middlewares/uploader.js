@@ -6,7 +6,6 @@ const sharpMulter = require('sharp-multer')
 const storage = sharpMulter({
     destination: (req, file, cb) => {
         // Rename original file
-        console.log(file)
         file.originalname = `${file.fieldname}${path.extname(file.originalname)}`
         if (file.fieldname == 'gallery') {
             cb(null, 'public/upload/images/gallery/')

@@ -13,6 +13,48 @@
     border-radius: 5px;
     filter: grayscale(90%);
 }
-.image-container img:hover {
+.gallery-image:hover {
     filter: grayscale(0%);
+}
+
+.overlay-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.overlay-content {
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+.overlay-title {
+    font-size: 24px;
+    color: #eee;
+}
+
+.overlay-image {
+    width: 100%;
+    box-shadow: 0 0 20px #eeeeee90;
+    border-radius: 10px;
+}
+
+.show-overlay {
+    opacity: 100;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+.hide-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
 }
