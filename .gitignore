@@ -130,4 +130,4 @@ dist
 .pnp.*
 
 # upload directory
-public/upload/
+public/upload/images/gallery/*.jpg
