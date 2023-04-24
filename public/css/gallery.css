@@ -31,11 +31,6 @@
     transition: 0.3s;
 }
 
-.overlay-content {
-    /* width: 100vw;
-    height: 100vh; */
-}
-
 .overlay-title {
     font-size: 24px;
     color: #eee;
